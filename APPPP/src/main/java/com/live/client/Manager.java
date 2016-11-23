@@ -11,7 +11,7 @@ public class Manager {
 	public static void main(String[] args) {
 
 		Client client = ClientBuilder.newClient();
-		Response response = client.target("").request().get();
+		Response response = client.target("http://localhost:8080/APPPP/webapi/secured/rest").request().get();
 
 		Person person = response.readEntity(Person.class);
 

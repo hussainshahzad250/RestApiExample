@@ -5,6 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.live.model.Person;
+
 @Path("secured")
 public class MyResource {
 
@@ -25,4 +27,15 @@ public class MyResource {
 //		person.setLastName(lastName);
 //		return person;
 //	}
+	
+	@Path("/rest")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Person getData() {
+		
+		Person person = new Person();
+		person.setFirstName("Shahzad");
+		person.setLastName("Hussain");
+		return person;
+	}
 }
