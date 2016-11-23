@@ -9,9 +9,20 @@ import javax.ws.rs.core.MediaType;
 public class MyResource {
 
 	@Path("message")
-	@GET    
-    @Produces(MediaType.TEXT_PLAIN)
-    public String securedMethod() {
-        return "Got it!";
-    }
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String securedMethod() {
+		return "Got it!";
+	}
+
+//	@Path("/rest/{firstName}/{lastName}")
+//	@GET
+//	@Produces(MediaType.TEXT_PLAIN)
+//	public Person getData(@PathParam("firstName") String firstName, @PathParam("lastName") String lastName) {
+//		
+//		Person person = new Person();
+//		person.setFirstName(firstName);
+//		person.setLastName(lastName);
+//		return person;
+//	}
 }
